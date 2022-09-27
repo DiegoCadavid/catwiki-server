@@ -10,6 +10,8 @@ app.use(cors({
     origin: "*"
 }))
 
+app.use(express.static('public'));
+
 // Routes
 const catRouter = require('./routes/catRouter');
 app.use('/', catRouter);
